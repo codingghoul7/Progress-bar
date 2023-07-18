@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: 400px;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+}
+.container .steps{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.steps .circle{
+height: 50px;
+width: 50px;
+border: 4px solid rgb(158, 138, 230);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color:rgb(210, 131, 247);
+font-size: 22px;
+font-weight: 400;
+background: white;   
+}
+
+.steps .circle.active{
+    border-color: rgb(66, 26, 158);
+    color: rgb(69, 80, 163);
+}
+.steps .progress-bar{
+position:absolute;
+height: 2px;
+width: 100%;
+background: blueviolet;
+z-index: -1;
+}
+.progress-bar .indicator{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:rgb(66, 26, 158);
+    /* z-index: -1; */
+}
+.conatiner .buttons{
+    display: flex;
+    gap: 20px;
+}
+.buttons button{
+    padding: 8px 25px;
+    background-color: rgb(80, 132, 210);
+    border: none;
+    border-radius: 8px;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgba(0,0, 0, 0.05);
+    cursor: pointer;
+}
+
+.buttons button:disabled{
+    background-color: rgb(134, 193, 245);
+    cursor: not-allowed;
+}
